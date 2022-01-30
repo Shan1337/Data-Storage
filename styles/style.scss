@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+$PaleBlue: hsl(243, 100%, 93%);
+$GrayishBlue: hsl(229, 7%, 55%);
+$DarkBlue: hsl(228, 56%, 26%);
+$VeryDarkBlue: hsl(229, 57%, 11%);
+
+// Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: $VeryDarkBlue url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-size: contain;
+    font-family: "Raleway";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    gap: 30px;
+
+    &__left-box,
+    &__right-box {
+        background-color: $DarkBlue;
+        border-radius: 10px;
+        padding: 40px;
+    }
+
+    &__left-box {
+        border-top-right-radius: 100px;
+        width: 330px;
+        padding-bottom: 20px;
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+    }
+
+    &__right-box {
+        align-self: flex-end;
+        color: white;
+        font-size: 0.8rem;
+        position: relative;
+        width: 500px;
+    }
+
+    &__description {
+        opacity: 0.7;
+    }
+
+    &__bubble {
+        top: -30%;
+        right: 7%;
+        padding: 10px 25px;
+        border-radius: 10px;
+        position: relative;
+        position: absolute;
+        background-color: white;
+        color: $VeryDarkBlue;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+
+    &__bubble::after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 13px solid transparent;
+        border-right: 10px solid white;
+        border-top: 13px solid white;
+        border-bottom: 10px solid transparent;
+        right: 0px;
+        bottom: -15px;
+    }
+
+    &__text_thin {
+        font-size: 0.7rem;
+        color: $GrayishBlue;
+        font-weight: bold;
+    }
+
+    &__icon {
+        padding: 12px;
+        margin: 5px;
+        background-color: $VeryDarkBlue;
+        border-radius: 10px;
+    }
+
+    &__folder-icon {
+        padding: 14px 12px;
+    }
+
+    &__upload-icon {
+        padding: 16px 12px;
+    }
+
+    &__progress-bar {
+        background-color: hsla(229, 57%, 11%, 0.5);
+        height: 18px;
+        width: 100%;
+        border-radius: 10px;
+        margin: 15px 0 10px 0;
+    }
+
+    &__bar {
+        background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+        width: 70%;
+        height: 18px;
+        border-radius: 10px;
+        border: 3px solid $VeryDarkBlue;
+    }
+
+    &__white-dot {
+        background-color: white;
+        height: 11px;
+        width: 11px;
+        float: right;
+        border-radius: 25px;
+    }
+
+    &__0-GB {
+        opacity: 0.7;
+        font-weight: bold;
+    }
+
+    &__1000-GB {
+        float: right;
+        opacity: 0.7;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        background: $VeryDarkBlue url(/images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__left-box,
+        &__right-box {
+            width: 350px;
+        }
+
+        &__left-box {
+            padding-bottom: 30px;
+        }
+
+        &__bubble {
+            top: 100%;
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        &__bubble::after {
+            display: none;
+        }
+
+        &__description {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #0c122c url(/images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-size: contain;
+  font-family: "Raleway";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+
+.main__left-box, .main__right-box {
+  background-color: #1d2c67;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.main__left-box {
+  border-top-right-radius: 100px;
+  width: 330px;
+  padding-bottom: 20px;
+}
+
+.main__logo {
+  margin-bottom: 20px;
+}
+
+.main__right-box {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: white;
+  font-size: 0.8rem;
+  position: relative;
+  width: 500px;
+}
+
+.main__description {
+  opacity: 0.7;
+}
+
+.main__bubble {
+  top: -30%;
+  right: 7%;
+  padding: 10px 25px;
+  border-radius: 10px;
+  position: relative;
+  position: absolute;
+  background-color: white;
+  color: #0c122c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.main__bubble::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 13px solid transparent;
+  border-right: 10px solid white;
+  border-top: 13px solid white;
+  border-bottom: 10px solid transparent;
+  right: 0px;
+  bottom: -15px;
+}
+
+.main__text_thin {
+  font-size: 0.7rem;
+  color: #848794;
+  font-weight: bold;
+}
+
+.main__icon {
+  padding: 12px;
+  margin: 5px;
+  background-color: #0c122c;
+  border-radius: 10px;
+}
+
+.main__folder-icon {
+  padding: 14px 12px;
+}
+
+.main__upload-icon {
+  padding: 16px 12px;
+}
+
+.main__progress-bar {
+  background-color: rgba(12, 18, 44, 0.5);
+  height: 18px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0 10px 0;
+}
+
+.main__bar {
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  width: 70%;
+  height: 18px;
+  border-radius: 10px;
+  border: 3px solid #0c122c;
+}
+
+.main__white-dot {
+  background-color: white;
+  height: 11px;
+  width: 11px;
+  float: right;
+  border-radius: 25px;
+}
+
+.main__0-GB {
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+.main__1000-GB {
+  float: right;
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  body {
+    background: #0c122c url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main__left-box, .main__right-box {
+    width: 350px;
+  }
+  .main__left-box {
+    padding-bottom: 30px;
+  }
+  .main__bubble {
+    top: 100%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+  }
+  .main__bubble::after {
+    display: none;
+  }
+  .main__description {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
